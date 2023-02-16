@@ -21,6 +21,11 @@ return require('packer').startup(function(use)
     -- or branch = '0.1.x',
     requires = { {'nvim-lua/plenary.nvim'} }
   }
+
+  use {
+    'nvim-treesitter/nvim-treesitter',
+    run = ':TSUpdate'
+  }
   -- My plugins here
   -- use 'foo1/bar1.nvim'
   -- use 'foo2/bar2.nvim'
