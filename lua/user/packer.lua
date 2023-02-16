@@ -31,9 +31,8 @@ return require('packer').startup(function(use)
     'folke/tokyonight.nvim',
     as = 'tokyonight'
   }
-  -- My plugins here
-  -- use 'foo1/bar1.nvim'
-  -- use 'foo2/bar2.nvim'
+
+  use 'tpope/vim-fugitive'
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
