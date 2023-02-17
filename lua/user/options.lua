@@ -10,10 +10,8 @@ vim.opt.numberwidth = 4                         -- set number column width to 2 
 vim.opt.cmdheight = 2
 vim.opt.smartindent = true
 vim.opt.list = true
-vim.opt.listchars:append { eol = '↵' }
-vim.opt.listchars:append { lead  = '.' }
-vim.opt.listchars:append { trail  = '.' }
-vim.opt.showtabline = 4
+vim.opt.listchars:append { eol = '↵', lead  = '.', trail  = '.' }
 vim.opt.signcolumn = "yes"
 vim.opt.conceallevel = 0
 vim.opt.updatetime = 300
+vim.opt.swapfile = false 
