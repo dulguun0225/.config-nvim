@@ -1,9 +1,11 @@
+local set = vim.keymap.set
+local cmd = vim.cmd
 vim.g.mapleader = " "
-vim.keymap.set("n", "<leader>e", vim.cmd.NvimTreeFocus)
-vim.keymap.set("n", "<C-n>", vim.cmd.NvimTreeToggle)
+set("n", "<leader>e", cmd.NvimTreeFocus)
+set("n", "<C-n>", cmd.NvimTreeToggle)
+set("n", "<TAB>",cmd.BufferLineCycleNext)
+set("n", "<S-Tab>",cmd.BufferLineCyclePrev)
+set("n", "<C-s>",cmd.w)
+set("n", "<C-w>",cmd.bd)
 
-vim.keymap.set("n", "<TAB>",vim.cmd.BufferLineCycleNext)
-vim.keymap.set("n", "<S-Tab>",vim.cmd.BufferLineCyclePrev)
-
-vim.keymap.set("n", "<C-s>",vim.cmd.w)
-vim.keymap.set("n", "<C-w>",vim.cmd.bd)
+set("n", "<Leader>gs", require('telescope.builtin').git_status)
