@@ -65,9 +65,13 @@ set('n', '<leader>fb', tsb.buffers, {})
 set('n', '<leader>fh', tsb.help_tags, {})
 set('n', '<leader>fg', tsb.git_files, {})
 
+-- Fugivitve
+set('n', '<leader>git', cmd.Git)
 
 -- Custom
 set("n", "<C-h>", "<C-w>h", {})
 set("n", "<C-j>", "<C-w>j", {})
 set("n", "<C-k>", "<C-w>k", {})
 set("n", "<C-l>", "<C-w>l", {})
+
+
