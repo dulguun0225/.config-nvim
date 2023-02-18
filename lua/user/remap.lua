@@ -28,7 +28,7 @@ set('n', '<A-0>', '<Cmd>BufferLast<CR>')
 set('n', '<A-p>', '<Cmd>BufferPin<CR>')
 -- Close buffer
 set('n', '<A-c>', '<Cmd>BufferClose<CR>')
-set('n', '<A-S-c>', '<Cmd>BufferCloseAllButCurrent<CR>')
+set('n', '<A-S-c>', '<Cmd>BufferClose!<CR>')
 -- Save buffer
 set('n', '<A-s>', cmd.w)
 set('i', '<A-s>', cmd.w)
