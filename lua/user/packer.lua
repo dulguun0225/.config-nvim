@@ -9,12 +9,11 @@ local ensure_packer = function()
     return false
 end
 
-print(vim.fn.stdpath('data'))
-
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
+    use 'nvim-tree/nvim-web-devicons'
     use {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.1',
@@ -29,7 +28,10 @@ return require('packer').startup(function(use)
 
     use {
         'folke/tokyonight.nvim',
-        as = 'tokyonight'
+        as = 'tokyonight',
+        config = function() 
+            vim.cmd('colorscheme tokyonight-night') 
+        end
     }
 
     use 'tpope/vim-fugitive'
@@ -55,13 +57,7 @@ return require('packer').startup(function(use)
         {'jose-elias-alvarez/null-ls.nvim'}}
     }
 
-    use {
-        'nvim-tree/nvim-tree.lua',
-        requires = {'nvim-tree/nvim-web-devicons' -- optional, for file icons
-        }
-    }
-
-    use {'akinsho/bufferline.nvim', tag = "v3.*", requires = 'nvim-tree/nvim-web-devicons'}
+    use 'nvim-tree/nvim-tree.lua'
 
     use {
         'numToStr/Comment.nvim',
@@ -69,6 +65,10 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
+
+    use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
+
+
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
     if packer_bootstrap then

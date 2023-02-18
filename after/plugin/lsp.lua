@@ -20,5 +20,3 @@ lsp.setup_servers{'tsserver', 'rust_analyzer', 'eslint', 'graphql', 'jsonls'}
 
 
 lsp.setup()
-
-print("LSP SETUP")
