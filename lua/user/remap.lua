@@ -32,7 +32,7 @@ set('n', '<A-S-c>', '<Cmd>BufferClose!<CR>')
 -- Save buffer
 set('n', '<A-s>', cmd.w)
 set('i', '<A-s>', cmd.w)
-
+set('n', '<A-n>', cmd.enew)
 -- Wipeout buffer
 --                 :BufferWipeout
 -- Close commands
@@ -51,7 +51,6 @@ set('n', '<Space>bw', '<Cmd>BufferOrderByWindowNumber<CR>')
 
 
 
-set("n", "<Leader>gs", require('telescope.builtin').git_status)
 
 
 
@@ -59,11 +58,11 @@ set("i", "kj", "<Esc>")
 
 -- Telescope
 local tsb = require('telescope.builtin')
-set('n', '<leader>ff', tsb.find_files, {})
---vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+set('n', '<leader>fff', tsb.find_files, {})
+set('n', '<leader>fg', tsb.live_grep, {})
 set('n', '<leader>fb', tsb.buffers, {})
 set('n', '<leader>fh', tsb.help_tags, {})
-set('n', '<leader>fg', tsb.git_files, {})
+set('n', '<leader>ff', tsb.git_files, {})
 
 -- Fugivitve
 set('n', '<leader>git', cmd.Git)
@@ -75,3 +74,7 @@ set("n", "<C-k>", "<C-w>k", {})
 set("n", "<C-l>", "<C-w>l", {})
 
 
+set("n", "<C-Right>", "<C-w>>", {})
+set("n", "<C-Left>", "<C-w><", {})
+set("n", "<C-Up>", "<C-w>+", {})
+set("n", "<C-Down>", "<C-w>-", {})

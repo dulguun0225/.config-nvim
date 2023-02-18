@@ -6,9 +6,9 @@ local lsp = require('lsp-zero').preset({
 })
 
 -- (Optional) Configure lua language server for neovim
---lsp.nvim_workspace()
+lsp.nvim_workspace()
 
-lsp.setup_servers{'tsserver', 'rust_analyzer', 'eslint', 'graphql', 'jsonls'}
+lsp.setup_servers{'lua_ls', 'tsserver', 'rust_analyzer', 'eslint', 'graphql', 'jsonls', 'yamlls'}
 
 --lsp.on_attach(
 --    function(client, bufnr)

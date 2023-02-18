@@ -9,7 +9,6 @@ opt.shiftwidth = 4
 opt.number = true                           -- set numbered lines
 opt.relativenumber = false                  -- set relative numbered lines
 opt.numberwidth = 4                         -- set number column width to 2 {default 4}
-opt.cmdheight = 2
 opt.smartindent = true
 opt.list = true
 opt.listchars:append { eol = '↵', lead  = '.', trail  = '.'}
