@@ -1,9 +1,12 @@
 local set = vim.keymap.set
 local cmd = vim.cmd
 vim.g.mapleader = " "
+--
+-- NvimTree
 set("n", "<leader>e", cmd.NvimTreeFocus)
 set("n", "<C-n>", cmd.NvimTreeToggle)
 
+-- BarBar
 -- Move to previous/next
 set('n', '<A-,>', '<Cmd>BufferPrevious<CR>')
 set('n', '<A-.>', '<Cmd>BufferNext<CR>')
@@ -53,3 +56,18 @@ set("n", "<Leader>gs", require('telescope.builtin').git_status)
 
 
 set("i", "kj", "<Esc>")
+
+-- Telescope
+local tsb = require('telescope.builtin')
+set('n', '<leader>ff', tsb.find_files, {})
+--vim.keymap.set('n', '<leader>fg', builtin.live_grep, {})
+set('n', '<leader>fb', tsb.buffers, {})
+set('n', '<leader>fh', tsb.help_tags, {})
+set('n', '<leader>fg', tsb.git_files, {})
+
+
+-- Custom
+set("n", "<C-h>", "<C-w>h", {})
+set("n", "<C-j>", "<C-w>j", {})
+set("n", "<C-k>", "<C-w>k", {})
+set("n", "<C-l>", "<C-w>l", {})
