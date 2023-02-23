@@ -33,6 +33,7 @@ set('n', '<A-S-c>', '<Cmd>BufferClose!<CR>')
 set('n', '<A-s>', cmd.w)
 set('i', '<A-s>', cmd.w)
 set('n', '<A-n>', cmd.enew)
+set('n', '<A-f>', vim.lsp.buf.format)
 -- Wipeout buffer
 --                 :BufferWipeout
 -- Close commands

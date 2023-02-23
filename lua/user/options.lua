@@ -11,7 +11,7 @@ opt.relativenumber = false                  -- set relative numbered lines
 opt.numberwidth = 4                         -- set number column width to 2 {default 4}
 opt.smartindent = true
 opt.list = true
-opt.listchars:append { eol = '↵', lead  = '.', trail  = '.'}
+opt.listchars:append { lead  = '.', trail  = '.'}
 opt.signcolumn = "yes"
 opt.conceallevel = 0
 opt.updatetime = 300
