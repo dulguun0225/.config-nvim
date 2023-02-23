@@ -9,9 +9,6 @@ local ensure_packer = function()
     return false
 end
 
-
-print(vim.fn.stdpath('data'))
-
 local packer_bootstrap = ensure_packer()
 
 return require('packer').startup(function(use)
@@ -31,10 +28,7 @@ return require('packer').startup(function(use)
 
     use {
         'folke/tokyonight.nvim',
-        as = 'tokyonight',
-        config = function() 
-            vim.cmd('colorscheme tokyonight-night') 
-        end
+        as = 'tokyonight'
     }
 
     use 'tpope/vim-fugitive'
