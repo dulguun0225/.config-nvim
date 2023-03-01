@@ -32,6 +32,7 @@ set('n', '<A-c>', '<Cmd>BufferClose<CR>',opts)
 set('n', '<A-S-c>', '<Cmd>BufferClose!<CR>',opts)
 -- Save buffer
 set('n', '<A-s>', cmd.w)
+set('i', '<A-s>', cmd.w)
 set('n', '<A-n>', cmd.enew)
 set('n', '<A-f>', vim.lsp.buf.format)
 -- Wipeout buffer
@@ -74,3 +75,11 @@ set("n", "<C-Right>", "<C-w>>", opts)
 set("n", "<C-Left>", "<C-w><", opts)
 set("n", "<C-Up>", "<C-w>+", opts)
 set("n", "<C-Down>", "<C-w>-", opts)
+
+set("t", "<Esc>", "<C-\\><C-n>", opts)
+
+-- ToggleTerm 
+set("n", "<leader>tt", "<Cmd>ToggleTerm direction=float<CR>", opts); 
+set("n", "<leader>tb", "<Cmd>ToggleTerm direction=tab<CR>", opts); 
+set("n", "<leader>tv", "<Cmd>ToggleTerm direction=vertical<CR>", opts); 
+set("n", "<leader>th", "<Cmd>ToggleTerm direction=horizontal<CR>", opts); 

@@ -20,3 +20,12 @@ lsp.setup_servers{'lua_ls', 'tsserver', 'rust_analyzer', 'eslint', 'graphql', 'j
 
 
 lsp.setup()
+
+vim.diagnostic.config({
+    virtual_text = true,
+    signs = true,
+    update_in_insert = true,
+    underline = true, 
+    severity_sort = true,
+    float = true
+})

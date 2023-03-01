@@ -14,6 +14,7 @@ local packer_bootstrap = ensure_packer()
 return require('packer').startup(function(use)
     use 'wbthomason/packer.nvim'
     use 'nvim-tree/nvim-web-devicons'
+    use 'nvim-lua/plenary.nvim'
     use {
         'nvim-telescope/telescope.nvim',
         tag = '0.1.1',
@@ -53,6 +54,7 @@ return require('packer').startup(function(use)
         -- Linter & Formatter
         {'jose-elias-alvarez/null-ls.nvim'}}
     }
+    
 
     use 'nvim-tree/nvim-tree.lua'
 
@@ -65,12 +67,16 @@ return require('packer').startup(function(use)
 
     use {'romgrk/barbar.nvim', requires = 'nvim-web-devicons'}
 
-    use 'tpope/vim-fugitive'
-
     use {"akinsho/toggleterm.nvim", tag = '*', config = function()
         require("toggleterm").setup()
     end}
 
+    use {
+        'simrat39/inlay-hints.nvim',
+        config = function() 
+            require("inlay-hints").setup()
+        end
+    }
 
     -- Automatically set up your configuration after cloning packer.nvim
     -- Put this at the end after all plugins
