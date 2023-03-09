@@ -79,7 +79,6 @@ set("n", "<C-Down>", "<C-w>-", opts)
 set("t", "<Esc>", "<C-\\><C-n>", opts)
 
 -- ToggleTerm 
-set("t", "<leader>tt", "<Cmd>ToggleTerm<CR>", opts); 
 set("n", "<leader>tt", "<Cmd>ToggleTerm direction=float<CR>", opts); 
 set("n", "<leader>tb", "<Cmd>ToggleTerm direction=tab<CR>", opts); 
 set("n", "<leader>tv", "<Cmd>ToggleTerm direction=vertical<CR>", opts); 

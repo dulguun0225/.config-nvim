@@ -16,3 +16,4 @@ opt.signcolumn = "yes"
 opt.conceallevel = 0
 opt.updatetime = 300
 opt.swapfile = false 
+opt.clipboard = "unnamedplus"
